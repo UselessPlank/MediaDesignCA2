@@ -4,7 +4,7 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-weight: bold;
 }
 
@@ -31,15 +31,7 @@ header img {
     transform: scale(1.05);
 }
 
-/* Footer */
-footer {
-    background: #222;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Example: Hero section font-size for smaller screens */
+/* Hero section font-size adjustments */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -50,7 +42,17 @@ footer {
     }
 }
 
-/* Navbar Styling */
+/* ================== */
+/* NavBar CSS */
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff; /* Solid background for visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    z-index: 1030;
+}
+
 nav.navbar {
     background-color: rgba(13, 110, 253, 0.9); /* Transparent background */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -109,11 +111,14 @@ nav .navbar-toggler {
     color: #f0f0f0; /* Brand in the same light color */
     font-weight: bold;
 }
+
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
 }
 
+/* ================== */
+/* Hero Section CSS */
 .hero-section {
     padding: 3rem 0; /* Reduced padding */
 }
@@ -138,7 +143,8 @@ html {
     margin-top: 1rem;
 }
     
-/* Modal Styling */
+/* ================== */
+/* Modal Menus CSS */
 .modal-content {
     background: linear-gradient(90deg, #666699, #004080); /* Set background to the muted purple */
     color: #ffffff; /* Ensure text is white for readability */
@@ -169,7 +175,8 @@ html {
     font-size: 1.5rem;
 }
 
-/* Splash Screen Styles */
+/* ================== */
+/* Splash Screen CSS */
 #splashScreen {
     position: fixed;
     top: 0;
@@ -217,4 +224,24 @@ h2 {
 /* Optional: Apply to all text for a cohesive style */
 body {
     font-family: 'Roboto', sans-serif;
+}
+
+/* ================== */
+/* Footer Section CSS */
+html, body {
+    height: 100%; /* Ensure the page fills the viewport */
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+footer {
+    font-family: 'Roboto', sans-serif; /* Matches the Google Font in your project */
+    font-size: 0.9rem; /* Slightly smaller text */
+    background-color: #343a40; /* Dark Bootstrap background */
+    color: white;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
 }

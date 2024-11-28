@@ -46,3 +46,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }, 1000); // Show splash screen for 3 seconds
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".navbar");
+    const navbarHeight = navbar.offsetHeight; // Height of the navbar
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > navbarHeight) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    });
+});
