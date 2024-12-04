@@ -346,3 +346,72 @@ footer {
     max-width: 100%; /* Ensure they stay full width within their container */
     width: 100%;
 }
+
+/* Style for the button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Hidden initially */
+    visibility: hidden; /* Prevents interaction when hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 1; /* Visible when scrolled */
+    visibility: visible;
+}
+
+/* Arrow icon */
+.back-to-top::before {
+    content: '↑';
+    font-size: 24px;
+}
+
+/* Dropdown container */
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dropdown-wrapper {
+    position: relative;
+}
+
+/* Style the select element */
+select.form-control {
+    appearance: none; /* Remove default styling */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 10px;
+    padding-right: 35px; /* Add space for the icon */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"%3E%3Cpath fill="%23000000" d="M143 352.3L7 215.7c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0L160 242.5l96.5-96.5c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L177 352.3c-9.4 9.4-24.6 9.4-34 .1z"%3E%3C/path%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Align the icon inside */
+    background-size: 15px;
+    cursor: pointer;
+}
+
+/* On focus or hover */
+select.form-control:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}

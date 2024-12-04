@@ -65,3 +65,4 @@ function sendEmail(event) {
     const successMessage = document.getElementById('successMessage');
     successMessage.style.display = 'block';
 }
+

@@ -37,7 +37,7 @@
             <div class="card-body text-center">
                 <img src="images/max.png" alt="Profile Image" class="rounded-circle mb-4" width="120">
                 <h1 class="card-title mb-3">Interactive Media Design</h1>
-                <p class="card-text">Jason O'Connor's CV & Portfolio</p>
+                <h5 class="card-text">Jason O'Connor's CV & Portfolio</h5>
             </div>
         </div>
     </div>
@@ -69,6 +69,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#hobbies">Hobbies & Interests</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Me</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -86,8 +89,11 @@
                     programming. Getting the chance to work with so many coding frameworks has opened my eyes to the
                     career possibilities I can pursue after completing my degree.
                 </p>
-                <p style="text-align: center;">After completing my Leaving Certificate, I spent 6 months working in SuperValu Bray, where I gained invaluable customer service experience, and learned a lot about the retail environment while improving my communicational skills greatly. 
-                    During my free time, I greatly enjoy watching Football and Formula 1, going for hikes or walks, and relaxing with card games like solitaire and Uno. </p>
+                <p style="text-align: center;">After completing my Leaving Certificate, I spent 6 months working in
+                    SuperValu Bray, where I gained invaluable customer service experience, and learned a lot about the
+                    retail environment while improving my communicational skills greatly.
+                    During my free time, I greatly enjoy watching Football and Formula 1, going for hikes or walks, and
+                    relaxing with card games like solitaire and Uno. </p>
             </div>
         </div>
     </section>
@@ -100,12 +106,14 @@
                 <div class="col-md-6">
                     <h4><b>Educational History</b> (2019–2024)</h4>
                     <p></p>
-                    <p><b>QQI Level 5 Computer Science:</b> Starting this course in 2019 in Bray Institute of Further Education, this was my first step in my
+                    <p><b>QQI Level 5 Computer Science:</b> Starting this course in 2019 in Bray Institute of Further
+                        Education, this was my first step in my
                         educational career in Computing. I completed this course
                         with straight A's and learned a lot about Java, HTML, and CSS. Networking was also a part of
                         this course.
                     </p>
-                    <p><b>QQI Level 6 Networks & Cyber Security:</b> This course started in 2020, again in Bray Institute of Further Education, and was a deeper look
+                    <p><b>QQI Level 6 Networks & Cyber Security:</b> This course started in 2020, again in Bray
+                        Institute of Further Education, and was a deeper look
                         into the networking and programming world, which
                         I greatly enjoyed as we worked on Javascript, Networking, and Operating Systems. I achieved
                         straight A's again on this course.
@@ -118,17 +126,20 @@
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <!-- Dropdown to select semester -->
-                    <label for="semesterSelect"><b>Select Semester for TUD Tallaght</b></label>
-                    <select id="semesterSelect" class="form-control" onchange="updateTable()">
-                        <option value="1">Semester 1</option>
-                        <option value="2">Semester 2</option>
-                        <option value="3">Semester 3</option>
-                        <option value="4">Semester 4</option>
-                        <option value="5">Semester 5</option>
-                        <option value="6">Semester 6</option>
-                    </select>
-                
+                    <div class="dropdown-container">
+                        <label for="semesterSelect"><b>Select Semester for TUD Tallaght</b></label>
+                        <div class="dropdown-wrapper">
+                            <select id="semesterSelect" class="form-control" onchange="updateTable()">
+                                <option value="1">Semester 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semester 5</option>
+                                <option value="6">Semester 6</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <!-- Table to display grades -->
                     <table class="table table-striped" id="gradesTable">
                         <thead>
@@ -170,7 +181,7 @@
                         </tbody>
                     </table>
                 </div>
-                
+
                 <script>
                     const gradesData = {
                         1: [
@@ -217,18 +228,18 @@
                             { module: "Work Placement", grade: "Pass" }
                         ]
                     };
-                
+
                     function updateTable() {
                         const semester = document.getElementById("semesterSelect").value;
                         const table = document.getElementById("gradesTable");
                         const tbody = table.getElementsByTagName("tbody")[0];
-                        
+
                         // Clear the table body
                         tbody.innerHTML = "";
-                
+
                         // Get the grades for the selected semester
                         const selectedSemesterGrades = gradesData[semester];
-                
+
                         // Update the table with the new grades
                         selectedSemesterGrades.forEach(grade => {
                             const row = tbody.insertRow();
@@ -237,13 +248,13 @@
                             cell1.textContent = grade.module;
                             cell2.textContent = grade.grade;
                         });
-                
+
                         // Update the table heading
                         table.querySelector("h4").innerHTML = `<b>Semester ${semester}</b> Grades`;
                     }
                 </script>
-                
-        </div>
+
+            </div>
     </section>
 
     <!-- Creating the Experience Section -->
@@ -284,7 +295,7 @@
         </div>
     </section>
 
-    <!-- Creating Modal for Experience 1 -->
+    <!-- Modal for Experience 1 -->
     <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -293,28 +304,30 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
-                <div class="modal-body d-flex">
-                    <img src="images/super_logo.jpg" alt="E-commerce Platform" class="img-fluid me-3"
-                        style="width: 20%; border-radius: 25px;">
-                </div>
-
-                <div>
-                    <p><b>SuperValu Bray:</b> After finishing my Leaving Certificate, I got a job in SuperValu Bray as a
-                        Sales Assistant, where I worked on the checkouts, handled customer queries, catered to stock
-                        taking, and other day to day activities. Here, I improved my communicational skills by
-                        practicing each day while working to ensure each customers needs were satisfied.</p>
-                    <ul>
-                        <li>Cash Handling: Worked Checkouts, Counted Cash...</li>
-                        <li>Stock Taking: Carried out Inventory Counts...</li>
-                        <li>Customer Care: Handled Customer Queries...</li>
-                    </ul>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <img src="images/super_logo.jpg" alt="SuperValu Logo" class="img-fluid"
+                            style="max-width: 200px; border-radius: 25px;">
+                    </div>
+                    <div class="px-3">
+                        <p><b>SuperValu Bray:</b> After finishing my Leaving Certificate, I got a job in SuperValu Bray
+                            as a
+                            Sales Assistant, where I worked on the checkouts, handled customer queries, catered to stock
+                            taking, and other day-to-day activities. Here, I improved my communication skills by
+                            practicing
+                            each day while working to ensure each customer's needs were satisfied.</p>
+                        <ul>
+                            <li><b>Cash Handling:</b> Worked checkouts, counted cash, and ensured accuracy.</li>
+                            <li><b>Stock Taking:</b> Carried out inventory counts and organized shelves.</li>
+                            <li><b>Customer Care:</b> Handled customer queries with professionalism.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
 
-    <!-- Creating Modal for Experience 2 -->
+    <!-- Modal for Experience 2 -->
     <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -323,29 +336,36 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
-                <div class="modal-body d-flex">
-                    <img src="images/snow_logo.jpg" alt="E-commerce Platform" class="img-fluid me-3"
-                        style="width: 20%; border-radius: 25px;">
-                </div>
-
-                <div>
-                    <p>Snow Technology:</b> For my Work Placement, I achieved a place within Snow Technology, an Irish
-                        Payroll, Time & Attendance company who produce and support the Quantum Software Suite. During my
-                        time, I was on the Customer Support team, where I worked the Support phone line and emails and
-                        dialed remotely in with clients to diagnose and solve their issues. I also worked with Snows'
-                        many teams, giving me an informative view into the workings of the company, and I was also
-                        offered a chance to return to work with Snow full time once I achieve my degree, which I
-                        graciously accepted and look forward to.</p>
-                    <ul>
-                        <li>Support Line: Worked the Phone & Emails for Support.</li>
-                        <li>Bureau: Created Macros, Excel Payroll Sheets, and More.</li>
-                        <li>Development: Experienced Working on Backend of Quantum Software.</li>
-                    </ul>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <img src="images/snow_logo.jpg" alt="Snow Technology Logo" class="img-fluid"
+                            style="max-width: 200px; border-radius: 25px;">
+                    </div>
+                    <div class="px-3">
+                        <p><b>Snow Technology:</b> For my Work Placement, I achieved a place within Snow Technology, an
+                            Irish
+                            Payroll, Time & Attendance company that produces and supports the Quantum Software Suite.
+                            During
+                            my time, I was on the Customer Support team, where I worked the support phone line and
+                            emails and
+                            dialed remotely in with clients to diagnose and solve their issues. I also worked with
+                            Snow's
+                            many teams, giving me an informative view into the workings of the company. I was also
+                            offered a
+                            chance to return to work with Snow full-time once I achieve my degree, which I graciously
+                            accepted
+                            and look forward to.</p>
+                        <ul>
+                            <li><b>Support Line:</b> Worked the phone and emails for customer support.</li>
+                            <li><b>Bureau:</b> Created macros, Excel payroll sheets, and other solutions.</li>
+                            <li><b>Development:</b> Experienced working on the backend of Quantum Software.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
 
 
     <!-- Creating the Projects Section -->
@@ -422,7 +442,7 @@
     <!-- Creating the Skills Section -->
     <section id="skills" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Skills *NOT DONE*</h2>
+            <h2 class="text-center mb-4">Skills</h2>
             <div class="row">
 
                 <!-- Problem Solving Skills -->
@@ -430,9 +450,12 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="card-title"><b>Problem Solving</b></h5>
-                            <img src="images/idea.jpg" alt="Profile Image" class="rounded-circle mb-4" width="120" height="120">
-                            <p class="card-text">Having completed a QQI Level 5 & 6 and currently undertaking a QQI Level 8, I have been given the opportunities to improve my problem solving skills across projects and group work.</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formula1Modal">View
+                            <img src="images/idea.jpg" alt="Profile Image" class="rounded-circle mb-4" width="120"
+                                height="120">
+                            <p class="card-text">Having completed a QQI Level 5 & 6 and currently undertaking a QQI
+                                Level 8, I have been given the opportunities to improve my problem solving skills across
+                                projects and group work.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#problemModal">View
                                 Details</button>
                         </div>
                     </div>
@@ -443,9 +466,13 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="card-title"><b>Communicational Skills</b></h5>
-                            <img src="images/talk.png" alt="Profile Image" class="rounded-circle mb-4" width="120" height="120">
-                            <p class="card-text">Getting the chance to be a part of many projects and group work, as well as Work Placement has allowed me to hone my communicational skills and become a much more outgoing, well-spoken person.</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simRacingModal">View
+                            <img src="images/talk.png" alt="Profile Image" class="rounded-circle mb-4" width="120"
+                                height="120">
+                            <p class="card-text">Getting the chance to be a part of many projects and group work, as
+                                well as Work Placement has allowed me to hone my communicational skills and become a
+                                much more outgoing, well-spoken person.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#communicateModal">View
                                 Details</button>
                         </div>
                     </div>
@@ -455,24 +482,27 @@
     </section>
 
     <!-- Creating Problem Solving Modal -->
-    <div class="modal fade" id="formula1Modal" tabindex="-1" aria-labelledby="formula1ModalLabel" aria-hidden="true">
+    <div class="modal fade" id="problemModal" tabindex="-1" aria-labelledby="problemModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="formula1ModalLabel"><b>Communicational Skills</b></h3>
+                    <h3 class="modal-title" id="problemModalLabel"><b>Problem Solving Skills</b></h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex">
                     <img src="images/idea.jpg" alt="Idea" class="img-fluid me-3"
-                        style="width: 50%; border-radius: 10px;">
+                        style="width: 100%; border-radius: 10px;">
                     <div>
-                        <p>Watching Formula 1 is passion of mine, especially following iconic drivers like Max Verstappen and upcoming talents like Oscar Piastri. It combines cutting-edge technology from Workday, team strategy, and the thrill
-                            of high-speed racing.</p>
+                        <p>Problem-solving has been a key focus of mine throughout college, as I enjoy breaking down
+                            challenges into manageable steps and finding effective solutions. This skill has been
+                            strengthened through academic projects, group work, and practical experiences that required
+                            critical thinking and adaptability.</p>
                         <ul>
-                            <li>Demonstrates your ability to think critically, analyze situations, and devise effective solutions.</li>
-                            <li>Employers value this skill because it shows you're proactive and resourceful, especially in challenging situations.</li>
-                            <li>Improved this skill during many group and project works.</li>
+                            <li>Gained practical problem-solving skills through collaborative group projects.</li>
+                            <li>Learned to analyze situations and develop solutions in academic and work settings.</li>
+                            <li>Continuously improving this skill through hands-on experiences and feedback.</li>
                         </ul>
+
                     </div>
                 </div>
             </div>
@@ -480,24 +510,31 @@
     </div>
 
     <!-- Creating Communicational Modal -->
-    <div class="modal fade" id="simRacingModal" tabindex="-1" aria-labelledby="simRacingModalLabel" aria-hidden="true">
+    <div class="modal fade" id="communicateModal" tabindex="-1" aria-labelledby="communicateModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="simRacingModalLabel"><b>Travelling</b></h3>
+                    <h3 class="modal-title" id="communicateModalLabel"><b>Communicational Skills</b></h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex">
-                    <img src="images/beach.png" alt="Beach" class="img-fluid me-3"
+                    <img src="images/Network.png" alt="Beach" class="img-fluid me-3"
                         style="width: 100%; border-radius: 10px;">
                     <div>
-                        <p>Since starting my educational journey in college, I have ensured I keep a good balance of work and travel, where during my free time I try and travel to new places and experience many cultures. Recently, I have been spending time travelling to London to see Tottenham Hotspur FC, and last year my family and I visited the United States to see Disneyland.</p>
+                        <p>During my college journey, I have worked on my communication skills in various settings, such
+                            as actively participating in group projects which has enhanced my ability to collaborate
+                            effectively and articulate my ideas clearly. During these projects, I have practiced active
+                            listening, which proved valuable during work placement with my colleagues in a professional
+                            environment.</p>
                         <ul>
-                            <li>Travel to many places to experience cultures of all kinds.</li>
-                            <li>Enjoy travelling on a budget, making the most of cheaper trips.</li>
-                            <li>Feel travelling is hugely important for mental health.</li>
+                            <li>Improved teamwork and communication skills through collaborative group projects.</li>
+                            <li>Gained professional communication experience during work placement.</li>
+                            <li>Developed confidence in public speaking and presentations through college activities.
+                            </li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -514,8 +551,11 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="card-title"><b>Formula 1</b></h5>
-                            <img src="images/F1.jpg" alt="Profile Image" class="rounded-circle mb-4" width="120" height="120">
-                            <p class="card-text">Formula One, commonly known as Formula 1 or F1, is the highest class of international racing for open-wheel single-seater formula racing cars sanctioned by the Fédération Internationale de l'Automobile.</p>
+                            <img src="images/F1.jpg" alt="Profile Image" class="rounded-circle mb-4" width="120"
+                                height="120">
+                            <p class="card-text">Formula One, commonly known as Formula 1 or F1, is the highest class of
+                                international racing for open-wheel single-seater formula racing cars sanctioned by the
+                                Fédération Internationale de l'Automobile.</p>
                             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formula1Modal">View
                                 Details</button>
                         </div>
@@ -528,7 +568,9 @@
                         <div class="card-body">
                             <h5 class="card-title"><b>Travelling</b></h5>
                             <img src="images/Travel.png" alt="Profile Image" class="rounded-circle mb-4" width="120">
-                            <p class="card-text">My favourite thing to look forward to is a good holiday away to a new location, fresh with places to explore and new people to meet. Getting to find new locations to visit is a hobby of mine.</p>
+                            <p class="card-text">My favourite thing to look forward to is a good holiday away to a new
+                                location, fresh with places to explore and new people to meet. Getting to find new
+                                locations to visit is a hobby of mine.</p>
                             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simRacingModal">View
                                 Details</button>
                         </div>
@@ -550,7 +592,9 @@
                     <img src="images/Max1.png" alt="Formula 1" class="img-fluid me-3"
                         style="width: 50%; border-radius: 10px;">
                     <div>
-                        <p>Watching Formula 1 is passion of mine, especially following iconic drivers like Max Verstappen and upcoming talents like Oscar Piastri. It combines cutting-edge technology from Workday, team strategy, and the thrill
+                        <p>Watching Formula 1 is passion of mine, especially following iconic drivers like Max
+                            Verstappen and upcoming talents like Oscar Piastri. It combines cutting-edge technology from
+                            Workday, team strategy, and the thrill
                             of high-speed racing.</p>
                         <ul>
                             <li>Attended multiple Grand Prix events in person, such as Zandvoort and Imola.</li>
@@ -575,7 +619,10 @@
                     <img src="images/beach.png" alt="Beach" class="img-fluid me-3"
                         style="width: 100%; border-radius: 10px;">
                     <div>
-                        <p>Since starting my educational journey in college, I have ensured I keep a good balance of work and travel, where during my free time I try and travel to new places and experience many cultures. Recently, I have been spending time travelling to London to see Tottenham Hotspur FC, and last year my family and I visited the United States to see Disneyland.</p>
+                        <p>Since starting my educational journey in college, I have ensured I keep a good balance of
+                            work and travel, where during my free time I try and travel to new places and experience
+                            many cultures. Recently, I have been spending time travelling to London to see Tottenham
+                            Hotspur FC, and last year my family and I visited the United States to see Disneyland.</p>
                         <ul>
                             <li>Travel to many places to experience cultures of all kinds.</li>
                             <li>Enjoy travelling on a budget, making the most of cheaper trips.</li>
@@ -588,86 +635,117 @@
     </div>
 
     <!-- Creating the Contact Me Section -->
-    <div class="container">
-        <h1 class="text-center mb-4">Get in Contact with Me</h1>
-        <!-- First Column: Email Me -->
-        <div class="column">
-            <h3>Email Me</h3>
-            <form id="emailForm" onsubmit="sendEmail(event)">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" required />
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h1 class="text-center mb-4">Get in Contact with Me</h1>
+            <!-- First Column: Email Me -->
+            <div class="column">
+                <h3>Email Me</h3>
+                <form id="emailForm" onsubmit="sendEmail(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="button">Send</button>
+                    <div id="successMessage" class="success-message">
+                        Email Sent, Thank You for Getting in Contact!
+                    </div>
+                </form>
+            </div>
+
+            <div class="contact-box-container">
+                <div class="contact-box">
+                    <div class="top">
+                        <h4>Location</h4>
+                    </div>
+                    <div class="bottom">
+                        <p>89 Elgin Heights, Bray, County Wicklow, Ireland</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required />
+
+                <div class="contact-box">
+                    <div class="top">
+                        <h4>Email</h4>
+                    </div>
+                    <div class="bottom">
+                        <p>X00191019@mytudublin.ie</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="4" required></textarea>
+
+                <div class="contact-box">
+                    <div class="top">
+                        <h4>Phone Number</h4>
+                    </div>
+                    <div class="bottom">
+                        <p>+1 89 492 6500</p>
+                    </div>
                 </div>
-                <button type="submit" class="button">Send</button>
-                <div id="successMessage" class="success-message">
-                    Email Sent, Thank You for Getting in Contact!
+            </div>
+
+            <!-- Third Column: Find Us On Google Maps -->
+            <div class="column">
+                <h3>Find Me On Google Maps</h3>
+                <div
+                    style="width: 100%; height: 300px; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                    <p>Google Maps API Placeholder</p>
                 </div>
-            </form>
+            </div>
         </div>
 
-        <div class="contact-box-container">
-            <div class="contact-box">
-                <div class="top">
-                    <h4>Location</h4>
-                </div>
-                <div class="bottom">
-                    <p>89 Elgin Heights, Bray, County Wicklow, Ireland</p>
-                </div>
-            </div>
-        
-            <div class="contact-box">
-                <div class="top">
-                    <h4>Email</h4>
-                </div>
-                <div class="bottom">
-                    <p>X00191019@mytudublin.ie</p>
-                </div>
-            </div>
-        
-            <div class="contact-box">
-                <div class="top">
-                    <h4>Phone Number</h4>
-                </div>
-                <div class="bottom">
-                    <p>+1 89 492 6500</p>
+        <!-- Creating the Contact Me Popup Menu -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Contact Information</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column">
+                        <p><b>Email:</b> X00191019@mytudublin.ie</p>
+                        <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/jasonoconnor3400"> Checkout My LinkedIn
+                                Page!</a></p>
+                        <p><b>GitHub:</b> <a href="https://github.com/UselessPlank"> Visit My GitHub Account!</a></p>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Third Column: Find Us On Google Maps -->
-        <div class="column">
-            <h3>Find Us On Google Maps</h3>
-            <div style="width: 100%; height: 300px; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center;">
-                <p>Google Maps API Placeholder</p>
-            </div>
-        </div>
-    </div>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopButton"></button>
 
-    <!-- Creating the Contact Me Popup Menu -->
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="contactModalLabel">Contact Information</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex flex-column">
-                    <p><b>Email:</b> X00191019@mytudublin.ie</p>
-                    <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/jasonoconnor3400"> Checkout My LinkedIn
-                            Page!</a></p>
-                    <p><b>GitHub:</b> <a href="https://github.com/UselessPlank"> Visit My GitHub Account!</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script>
+        // Select the button
+        const backToTopButton = document.getElementById('backToTopButton');
+
+        // Function to handle scroll visibility
+        const handleScroll = () => {
+            if (window.scrollY > 300) { // Show button after scrolling 300px
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        };
+
+        // Attach the scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Scroll to the top of the page when button is clicked
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
+        });
+    </script>
 
     <!-- Creating Footer Section -->
     <footer class="bg-dark text-white text-center py-3 mt-auto">
@@ -683,6 +761,9 @@
 
     <!-- Link for the Bootstrap Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 
 </body>
 
