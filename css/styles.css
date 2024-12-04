@@ -4,7 +4,7 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
     font-weight: bold;
 }
 
@@ -29,6 +29,13 @@ header img {
 
 .card:hover {
     transform: scale(1.05);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 /* Hero section font-size adjustments */
@@ -145,34 +152,39 @@ html {
     
 /* ================== */
 /* Modal Menus CSS */
-.modal-content {
-    background: linear-gradient(90deg, #666699, #004080); /* Set background to the muted purple */
-    color: #ffffff; /* Ensure text is white for readability */
-    border: none; /* Remove default border */
-    border-radius: 8px; /* Add subtle rounding to edges */
+.modal-title {
+    text-align: center;
+    width: 100%;
 }
 
 .modal-header {
-    border-bottom: 2px solid #ffffff; /* Highlight border between header and body */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.modal-header .btn-close {
-    filter: invert(1); /* Makes the close button visible on a dark background */
+.modal-body img {
+    display: block;
+    margin: 0 auto;
 }
 
-.modal-body a {
-    color: #ffcccb; /* Light pink for links */
-    text-decoration: underline; /* Make links stand out */
-    transition: color 0.3s ease;
+.modal-body .btn {
+    display: block;
+    margin: 20px auto 0; /* Center the button with some margin */
 }
 
-.modal-body a:hover {
-    color: #ffffff; /* Links turn white on hover */
+/* Apply gradient background to all modals */
+.modal-content {
+    border-radius: 5px; /* Optional: Rounded corners for a polished look */
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add subtle shadow */
 }
 
-.modal-title {
-    font-weight: bold;
-    font-size: 1.5rem;
+/* Optional: Style modal headers and footers to match */
+.modal-header, .modal-footer {
+    background: linear-gradient(90deg, #b3b3ff, #6666ff);
+    border-bottom: none; /* Remove default border for a cleaner look */
+    color: white;
 }
 
 /* ================== */
@@ -244,4 +256,58 @@ footer {
     background-color: #343a40; /* Dark Bootstrap background */
     color: white;
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* ================== */
+/* Carousel Section Styling */
+#carousel {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.carousel {
+    border-radius: 10px; /* Reduced border radius */
+    overflow: hidden; /* Ensures clean edges */
+}
+
+.carousel-image-container {
+    width: 100%;
+    height: 400px; /* Fixed height for all images */
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Smooth scaling effect on hover */
+}
+
+.carousel-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.carousel-caption {
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Smooth scrolling and reduced padding for indicators */
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.6;
+}
+
+.carousel-indicators button.active {
+    opacity: 1;
+}
+
+p {
+    text-align: center;
 }

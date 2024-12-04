@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jason O'Connor Portfolio</title>
-    
+
     <!-- This is the Bootstrap CSS Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- This is the Custom CSS Link to Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
-    
+
     <!-- This is the Link to Custom Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -23,17 +23,20 @@
             <img src="images/max.png" alt="Profile" class="rounded-circle mb-3" width="120">
             <h1 class="display-5 hero-title">Jason O'Connor</h1>
             <p class="lead hero-subtitle">Computing with Software Development</p>
-            <button class="btn btn-outline-light btn-lg hero-btn" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Me</button>
+            <button class="btn btn-outline-light btn-lg hero-btn" data-bs-toggle="modal"
+                data-bs-target="#contactModal">Contact Me</button>
         </div>
     </header>
 
     <!-- Creating the Splash Screen Card -->
-    <div id="splashScreen" class="d-flex justify-content-center align-items-center vh-100 position-fixed top-0 start-0 w-100 bg-white">
-        <div class="card p-4 splash-card" style="background-color: #FFFDD0; width: 30rem; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+    <div id="splashScreen"
+        class="d-flex justify-content-center align-items-center vh-100 position-fixed top-0 start-0 w-100 bg-white">
+        <div class="card p-4 splash-card"
+            style="background-color: #FFFDD0; width: 30rem; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
             <div class="card-body text-center">
                 <img src="images/max.png" alt="Profile Image" class="rounded-circle mb-4" width="120">
-                <h1 class="card-title mb-3">Welcome to My Portfolio</h1>
-                <p class="card-text">Exploring My Skills and Projects</p>
+                <h1 class="card-title mb-3">Interactive Media Design</h1>
+                <p class="card-text">Jason O'Connor's CV & Portfolio</p>
             </div>
         </div>
     </div>
@@ -42,51 +45,106 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-        <!-- Making the NavBar Interactive -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#experience">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#achievements">Achievements</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#hobbies">Hobbies & Interests</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#references">References</a>
-                </li>
-            </ul>
-        </div>
+            <!-- Making the NavBar Interactive -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hobbies">Hobbies & Interests</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-    
-    <!-- Creating the Education Section -->
+
+    <!-- Creating the About Me Section -->
     <section id="education" class="py-5">
         <div class="container">
             <h2 class="text-center mb-4">About Me</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h4>Change this</h4>
-                        <p><b>Heading:</b> Enter text here...</p>
-                    </div>
+            <div>
+                <p style="text-align: center;">Ever since of the age of nine when I got my first PC, I've been
+                    interested in computers in some capacity. Since starting my journey in computing education, I have
+                    built many computers from scratch, upgraded and improved others, and learned so much about them.
+                    While undertaking our Computing course in TUD, I have found a new love for both networking and
+                    programming. Getting the chance to work with so many coding frameworks has opened my eyes to the
+                    career possibilities I can pursue after completing my degree.
+                </p>
             </div>
         </div>
     </section>
+
+    <!-- Add a Carousel Section -->
+    <section id="carousel" class="py-5 bg-dark">
+        <div class="container-fluid px-0"> <!-- Reduced container padding -->
+            <h2 class="text-center text-white mb-4">Image Carousel</h2>
+            <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0"
+                        class="active"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- Carousel Items -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-image-container">
+                            <img src="images/max.png" class="d-block w-100 carousel-image" alt="Image 1">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2">
+                                <p class="mb-0 text-white">Image 1 Description</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-image-container">
+                            <img src="images/norris.jpg" class="d-block w-100 carousel-image" alt="Image 2">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2">
+                                <p class="mb-0 text-white">Image 2 Description</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-image-container">
+                            <img src="images/snow.png" class="d-block w-100 carousel-image" alt="Image 3">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2">
+                                <p class="mb-0 text-white">Image 3 Description</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Creating the Education Grades Section -->
     <section id="education" class="py-5 bg-light">
@@ -96,14 +154,21 @@
                 <div class="col-md-6">
                     <h4><b>TUD Tallaght</b> (2020–2024)</h4>
                     <p></p>
-                    <p><b>QQI Level 5 Computer Science:</b> Starting this course in 2019, this was my first step in my educational career in Computing. I completed this course
-                        with straight A's and learned a lot about Java, HTML, and CSS. Networking was also a part of this course.
+                    <p><b>QQI Level 5 Computer Science:</b> Starting this course in 2019, this was my first step in my
+                        educational career in Computing. I completed this course
+                        with straight A's and learned a lot about Java, HTML, and CSS. Networking was also a part of
+                        this course.
                     </p>
-                    <p><b>QQI Level 6 Networks & Cyber Security:</b> This course started in 2020 and was a deeper look into the networking and programming world, which
-                        I greatly enjoyed as we worked on Javascript, Networking, and Operating Systems. I achieved straight A's again on this course.
+                    <p><b>QQI Level 6 Networks & Cyber Security:</b> This course started in 2020 and was a deeper look
+                        into the networking and programming world, which
+                        I greatly enjoyed as we worked on Javascript, Networking, and Operating Systems. I achieved
+                        straight A's again on this course.
                     </p>
-                    <p><b>QQI Level 8 Computing w/ Software Development:</b> Currently undertaking and in the final year of this course, I am greatly enjoying my time here 
-                        in Tallaght, where I am not only learning a lot, but making new friends, connections, and improving as a person every day.
+                    <p><b>QQI Level 8 Computing w/ Software Development:</b> Currently undertaking and in the final year
+                        of this course, I am greatly enjoying my time here
+                        in Tallaght, where I am not only learning a lot, but making new friends, connections, and
+                        improving as a person every day. This course has allowed me to experience many different coding
+                        languages and frameworks to give me the experience to take into the workplace.
                     </p>
                 </div>
                 <div class="col-md-6">
@@ -150,7 +215,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Creating the Experience Section -->
     <section id="experience" class="py-5">
         <div class="container">
@@ -159,9 +224,14 @@
                 <div class="col-md-6">
                     <div class="card mb-4 py-5 bg-light">
                         <div class="card-body">
+                            <!-- Heading -->
                             <h5 class="card-title"><b>SuperValu Bray - Sales Assistant</b></h5>
+                            <!-- Description -->
                             <p class="card-text">Worked as Sales Assistant from 2018 to 2019.</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">View Details</button>
+                            <!-- Button -->
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">
+                                View Details
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -169,9 +239,14 @@
                 <div class="col-md-6">
                     <div class="card mb-4 py-5 bg-light">
                         <div class="card-body">
+                            <!-- Heading -->
                             <h5 class="card-title"><b>Snow Technology - Customer Support</b></h5>
+                            <!-- Description -->
                             <p class="card-text">Carried out my Work Placement with Snow for 6 Months.</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">View Details</button>
+                            <!-- Button -->
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">
+                                View Details
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -187,22 +262,26 @@
                     <h5 class="modal-title" id="project1ModalLabel"><b>SuperValu Bray: Sales Assistant</b></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            
-            <div class="modal-body d-flex">
-                <img src="images/super_logo.jpg" alt="E-commerce Platform" class="img-fluid me-3" style="width: 20%; border-radius: 25px;">
-            </div>
-            
-            <div>
-                <p><b>SuperValu Bray:</b> After finishing my Leaving Certificate, I got a job in SuperValu Bray as a Sales Assistant, where I worked on the checkouts, handled customer queries, catered to stock taking, and other day to day activities. Here, I improved my communicational skills by practicing each day while working to ensure each customers needs were satisfied.</p>
-                <ul>
-                    <li>Cash Handling: Worked Checkouts, Counted Cash...</li>
-                    <li>Stock Taking: Carried out Inventory Counts...</li>
-                    <li>Customer Care: Handled Customer Queries...</li>
-                </ul>
-            </div>
+
+                <div class="modal-body d-flex">
+                    <img src="images/super_logo.jpg" alt="E-commerce Platform" class="img-fluid me-3"
+                        style="width: 20%; border-radius: 25px;">
+                </div>
+
+                <div>
+                    <p><b>SuperValu Bray:</b> After finishing my Leaving Certificate, I got a job in SuperValu Bray as a
+                        Sales Assistant, where I worked on the checkouts, handled customer queries, catered to stock
+                        taking, and other day to day activities. Here, I improved my communicational skills by
+                        practicing each day while working to ensure each customers needs were satisfied.</p>
+                    <ul>
+                        <li>Cash Handling: Worked Checkouts, Counted Cash...</li>
+                        <li>Stock Taking: Carried out Inventory Counts...</li>
+                        <li>Customer Care: Handled Customer Queries...</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        </div>
+    </div>
     </div>
 
     <!-- Creating Modal for Experience 2 -->
@@ -210,25 +289,32 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="project2ModalLabel"><b>Project 2: E-commerce Platform</b></h5>
+                    <h5 class="modal-title" id="project2ModalLabel"><b>Snow Technology: Customer Support</b></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            
-            <div class="modal-body d-flex">
-                <img src="images/snow_logo.jpg" alt="E-commerce Platform" class="img-fluid me-3" style="width: 100%; border-radius: 25px;">
-            </div>
-            
-            <div>
-                <p>Snow Technology:</b> For my Work Placement, I achieved a place within Snow Technology, an Irish Payroll, Time & Attendance company who produce and support the Quantum Software Suite. During my time, I was on the Customer Support team, where I worked the Support phone line and emails and dialed remotely in with clients to diagnose and solve their issues. I also worked with Snows' many teams, giving me an informative view into the workings of the company, and I was also offered a chance to return to work with Snow full time once I achieve my degree, which I graciously accepted and look forward to.</p>
-                <ul>
-                    <li>Support Line: Worked the Phone & Emails for Support.</li>
-                    <li>Bureau: Created Macros, Excel Payroll Sheets, and More.</li>
-                    <li>Development: Experienced Working on Backend of Quantum Software.</li>
-                </ul>
-            </div>
+
+                <div class="modal-body d-flex">
+                    <img src="images/snow_logo.jpg" alt="E-commerce Platform" class="img-fluid me-3"
+                        style="width: 20%; border-radius: 25px;">
+                </div>
+
+                <div>
+                    <p>Snow Technology:</b> For my Work Placement, I achieved a place within Snow Technology, an Irish
+                        Payroll, Time & Attendance company who produce and support the Quantum Software Suite. During my
+                        time, I was on the Customer Support team, where I worked the Support phone line and emails and
+                        dialed remotely in with clients to diagnose and solve their issues. I also worked with Snows'
+                        many teams, giving me an informative view into the workings of the company, and I was also
+                        offered a chance to return to work with Snow full time once I achieve my degree, which I
+                        graciously accepted and look forward to.</p>
+                    <ul>
+                        <li>Support Line: Worked the Phone & Emails for Support.</li>
+                        <li>Bureau: Created Macros, Excel Payroll Sheets, and More.</li>
+                        <li>Development: Experienced Working on Backend of Quantum Software.</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        </div>
+    </div>
     </div>
 
 
@@ -238,11 +324,11 @@
             <h2 class="text-center mb-4">Projects</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <h4><b>Year 2</b> Project Code Type </h4>
+                    <h4><b>Year 2</b> Django </h4>
                     <p>Test Text</p>
                 </div>
                 <div class="col-md-6">
-                    <h4><b>Year 3</b> Django</h4>
+                    <h4><b>Year 3</b> C++</h4>
                     <p>Test Text</p>
                 </div>
             </div>
@@ -257,19 +343,22 @@
                     <h5 class="modal-title" id="project1ModalLabel"><b>Project 1: Portfolio Website</b></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            
-            <div class="modal-body d-flex">
-                <img src="images/max.png" alt="Portfolio Website" class="img-fluid me-3" style="width: 50%; border-radius: 10px;">
-            <div>
-                <p>This project is a responsive personal portfolio website that showcases my skills, education, and projects. Built with HTML, CSS, and JavaScript, the website features a modern design and is fully mobile-friendly.</p>
-                <ul>
-                    <li>Designed for both desktop and mobile platforms.</li>
-                    <li>Included a contact form with email functionality.</li>
-                    <li>Hosted on GitHub Pages.</li>
-                </ul>
+
+                <div class="modal-body d-flex">
+                    <img src="images/max.png" alt="Portfolio Website" class="img-fluid me-3"
+                        style="width: 50%; border-radius: 10px;">
+                    <div>
+                        <p>This project is a responsive personal portfolio website that showcases my skills, education,
+                            and projects. Built with HTML, CSS, and JavaScript, the website features a modern design and
+                            is fully mobile-friendly.</p>
+                        <ul>
+                            <li>Designed for both desktop and mobile platforms.</li>
+                            <li>Included a contact form with email functionality.</li>
+                            <li>Hosted on GitHub Pages.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
         </div>
     </div>
 
@@ -281,19 +370,22 @@
                     <h5 class="modal-title" id="project2ModalLabel"><b>Project 2: E-commerce Platform</b></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            
-            <div class="modal-body d-flex">
-                <img src="images/max.png" alt="E-commerce Platform" class="img-fluid me-3" style="width: 50%; border-radius: 10px;">
-            <div>
-                <p>This project is a fully functional e-commerce platform built using React and Node.js. It includes features such as user authentication, product management, and a payment gateway integration.</p>
-                <ul>
-                    <li>Implemented secure user authentication with JWT.</li>
-                    <li>Integrated payment gateway (Stripe API).</li>
-                    <li>Deployed using AWS services.</li>
-                </ul>
+
+                <div class="modal-body d-flex">
+                    <img src="images/max.png" alt="E-commerce Platform" class="img-fluid me-3"
+                        style="width: 50%; border-radius: 10px;">
+                    <div>
+                        <p>This project is a fully functional e-commerce platform built using React and Node.js. It
+                            includes features such as user authentication, product management, and a payment gateway
+                            integration.</p>
+                        <ul>
+                            <li>Implemented secure user authentication with JWT.</li>
+                            <li>Integrated payment gateway (Stripe API).</li>
+                            <li>Deployed using AWS services.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
         </div>
     </div>
 
@@ -302,55 +394,27 @@
         <div class="container">
             <h2 class="text-center mb-4">Skills</h2>
             <div class="row">
-    
+
                 <!-- Formula 1 Hobby -->
                 <div class="col-md-6">
                     <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="card-title"><b>Formula 1</b></h5>
                             <p class="card-text">Four Time World Champion</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formula1Modal">View Details</button>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formula1Modal">View
+                                Details</button>
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Sim Racing Hobby -->
                 <div class="col-md-6">
                     <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="card-title"><b>Sim Racing</b></h5>
                             <p class="card-text">Hundreds of Hours in Front of a Monitor</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simRacingModal">View Details</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-    
-
-
-    <!-- Creating the Achievements Section -->
-    <section id="achievements" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Achievements</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-4 py-5 bg-light">
-                        <div class="card-body">
-                            <h5 class="card-title"><b>Project 1: Portfolio Website</b></h5>
-                            <p class="card-text">A responsive personal portfolio website built using HTML, CSS, and JavaScript.</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">View Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="card mb-4 py-5 bg-light">
-                        <div class="card-body">
-                            <h5 class="card-title"><b>Project 2: E-commerce Platform</b></h5>
-                            <p class="card-text">Developed a fully functional e-commerce platform using React and Node.js.</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">View Details</button>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simRacingModal">View
+                                Details</button>
                         </div>
                     </div>
                 </div>
@@ -359,79 +423,87 @@
     </section>
 
     <!-- Creating the Hobbies Section -->
-    <section id="hobbies" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Hobbies & Interests</h2>
-        <div class="row">
+    <section id="hobbies" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Hobbies & Interests</h2>
+            <div class="row">
 
-            <!-- Formula 1 Hobby -->
-            <div class="col-md-6">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Formula 1</b></h5>
-                        <p class="card-text">Four Time World Champion</p>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formula1Modal">View Details</button>
+                <!-- Formula 1 Hobby -->
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Formula 1</b></h5>
+                            <p class="card-text">Four Time World Champion</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formula1Modal">View
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sim Racing Hobby -->
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Sim Racing</b></h5>
+                            <p class="card-text">Hundreds of Hours in Front of a Monitor</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simRacingModal">View
+                                Details</button>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Sim Racing Hobby -->
-            <div class="col-md-6">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Sim Racing</b></h5>
-                        <p class="card-text">Hundreds of Hours in Front of a Monitor</p>
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simRacingModal">View Details</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
 
     <!-- Creating Formula 1 Modal -->
     <div class="modal fade" id="formula1Modal" tabindex="-1" aria-labelledby="formula1ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="formula1ModalLabel"><b>Formula 1</b></h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body d-flex">
-                <img src="images/norris.jpg" alt="Formula 1" class="img-fluid me-3" style="width: 50%; border-radius: 10px;">
-                <div>
-                    <p>Formula 1 has always been a passion of mine, especially following iconic drivers like Michael Schumacher and Lewis Hamilton. It combines cutting-edge technology, strategy, and the thrill of high-speed racing.</p>
-                    <ul>
-                        <li>Attended multiple Grand Prix events in person.</li>
-                        <li>Studied aerodynamics and race strategies as a hobby.</li>
-                        <li>Supporter of sustainable developments in motorsport.</li>
-                    </ul>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="formula1ModalLabel"><b>Formula 1</b></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex">
+                    <img src="images/norris.jpg" alt="Formula 1" class="img-fluid me-3"
+                        style="width: 50%; border-radius: 10px;">
+                    <div>
+                        <p>Formula 1 has always been a passion of mine, especially following iconic drivers like Michael
+                            Schumacher and Lewis Hamilton. It combines cutting-edge technology, strategy, and the thrill
+                            of high-speed racing.</p>
+                        <ul>
+                            <li>Attended multiple Grand Prix events in person.</li>
+                            <li>Studied aerodynamics and race strategies as a hobby.</li>
+                            <li>Supporter of sustainable developments in motorsport.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
 
     <!-- Creating Sim Racing Modal -->
     <div class="modal fade" id="simRacingModal" tabindex="-1" aria-labelledby="simRacingModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="simRacingModalLabel"><b>Sim Racing</b></h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body d-flex">
-                <img src="images/norris.jpg" alt="Sim Racing" class="img-fluid me-3" style="width: 50%; border-radius: 10px;">
-                <div>
-                    <p>Sim racing is more than a game; it's a blend of skill, precision, and determination. Over the years, I've spent countless hours perfecting my craft in virtual racing simulators like iRacing and Assetto Corsa.</p>
-                    <ul>
-                        <li>Built a custom racing simulator rig at home.</li>
-                        <li>Participated in competitive online leagues.</li>
-                        <li>Improved real-world driving skills through simulation.</li>
-                    </ul>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="simRacingModalLabel"><b>Sim Racing</b></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex">
+                    <img src="images/norris.jpg" alt="Sim Racing" class="img-fluid me-3"
+                        style="width: 50%; border-radius: 10px;">
+                    <div>
+                        <p>Sim racing is more than a game; it's a blend of skill, precision, and determination. Over the
+                            years, I've spent countless hours perfecting my craft in virtual racing simulators like
+                            iRacing and Assetto Corsa.</p>
+                        <ul>
+                            <li>Built a custom racing simulator rig at home.</li>
+                            <li>Participated in competitive online leagues.</li>
+                            <li>Improved real-world driving skills through simulation.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
 
@@ -439,21 +511,22 @@
     <!-- Creating the References Section -->
 
 
-    
+
     <!-- Creating the Contact Me Popup Menu -->
     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="contactModalLabel">Contact Information</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column">
+                    <p><b>Email:</b> X00191019@mytudublin.ie</p>
+                    <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/jasonoconnor3400"> Checkout My LinkedIn
+                            Page!</a></p>
+                    <p><b>GitHub:</b> <a href="https://github.com/UselessPlank"> Visit My GitHub Account!</a></p>
+                </div>
             </div>
-            <div class="modal-body d-flex flex-column">
-                <p><b>Email:</b> X00191019@mytudublin.ie</p>
-                <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/jasonoconnor3400"> Checkout My LinkedIn Page!</a></p>
-                <p><b>GitHub:</b> <a href="https://github.com/UselessPlank"> Visit My GitHub Account!</a></p>
-            </div>
-        </div>
         </div>
     </div>
 
@@ -466,11 +539,12 @@
         </div>
     </footer>
 
-<!-- Link to My Scripts File -->
-<script src="js/scripts.js"></script>
+    <!-- Link to My Scripts File -->
+    <script src="js/scripts.js"></script>
 
-<!-- Link for the Bootstrap Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Link for the Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
