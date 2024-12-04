@@ -23,8 +23,9 @@
             <img src="images/max.png" alt="Profile" class="rounded-circle mb-3" width="120">
             <h1 class="display-5 hero-title">Jason O'Connor</h1>
             <p class="lead hero-subtitle">Computing with Software Development</p>
-            <button class="btn btn-outline-light btn-lg hero-btn" data-bs-toggle="modal"
-                data-bs-target="#contactModal">Contact Me</button>
+            <button class="btn custom-btn btn-lg hero-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
+                Contact Me
+            </button>
         </div>
     </header>
 
@@ -85,66 +86,11 @@
                     programming. Getting the chance to work with so many coding frameworks has opened my eyes to the
                     career possibilities I can pursue after completing my degree.
                 </p>
+                <p style="text-align: center;">After completing my Leaving Certificate, I spent 6 months working in SuperValu Bray, where I gained invaluable customer service experience, and learned a lot about the retail environment while improving my communicational skills greatly. 
+                    During my free time, I greatly enjoy watching Football and Formula 1, going for hikes or walks, and relaxing with card games like solitaire and Uno. </p>
             </div>
         </div>
     </section>
-
-    <!-- Add a Carousel Section -->
-    <section id="carousel" class="py-5 bg-dark">
-        <div class="container-fluid px-0"> <!-- Reduced container padding -->
-            <h2 class="text-center text-white mb-4">Image Carousel</h2>
-            <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                <!-- Indicators -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0"
-                        class="active"></button>
-                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2"></button>
-                </div>
-
-                <!-- Carousel Items -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="carousel-image-container">
-                            <img src="images/max.png" class="d-block w-100 carousel-image" alt="Image 1">
-                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2">
-                                <p class="mb-0 text-white">Image 1 Description</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="carousel-image-container">
-                            <img src="images/norris.jpg" class="d-block w-100 carousel-image" alt="Image 2">
-                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2">
-                                <p class="mb-0 text-white">Image 2 Description</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="carousel-image-container">
-                            <img src="images/snow.png" class="d-block w-100 carousel-image" alt="Image 3">
-                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2">
-                                <p class="mb-0 text-white">Image 3 Description</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Carousel Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </section>
-
 
     <!-- Creating the Education Grades Section -->
     <section id="education" class="py-5 bg-light">
@@ -152,14 +98,14 @@
             <h2 class="text-center mb-4">Education</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <h4><b>TUD Tallaght</b> (2020–2024)</h4>
+                    <h4><b>Educational History</b> (2019–2024)</h4>
                     <p></p>
-                    <p><b>QQI Level 5 Computer Science:</b> Starting this course in 2019, this was my first step in my
+                    <p><b>QQI Level 5 Computer Science:</b> Starting this course in 2019 in Bray Institute of Further Education, this was my first step in my
                         educational career in Computing. I completed this course
                         with straight A's and learned a lot about Java, HTML, and CSS. Networking was also a part of
                         this course.
                     </p>
-                    <p><b>QQI Level 6 Networks & Cyber Security:</b> This course started in 2020 and was a deeper look
+                    <p><b>QQI Level 6 Networks & Cyber Security:</b> This course started in 2020, again in Bray Institute of Further Education, and was a deeper look
                         into the networking and programming world, which
                         I greatly enjoyed as we worked on Javascript, Networking, and Operating Systems. I achieved
                         straight A's again on this course.
@@ -172,8 +118,19 @@
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <table class="table table-striped">
-                        <h4><b>Year 3</b> Grades</h4>
+                    <!-- Dropdown to select semester -->
+                    <label for="semesterSelect"><b>Select Semester for TUD Tallaght</b></label>
+                    <select id="semesterSelect" class="form-control" onchange="updateTable()">
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+                        <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                    </select>
+                
+                    <!-- Table to display grades -->
+                    <table class="table table-striped" id="gradesTable">
                         <thead>
                             <tr>
                                 <th>Module</th>
@@ -181,16 +138,17 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- Semester 1 Grades by default -->
                             <tr>
                                 <td>Server Side Web Development</td>
                                 <td>B</td>
                             </tr>
                             <tr>
                                 <td>Operating Systems</td>
-                                <td>B</td>
+                                <td>A</td>
                             </tr>
                             <tr>
-                                <td>Cloud Services & Distrubuted Computing</td>
+                                <td>Cloud Services & Distributed Computing</td>
                                 <td>C+</td>
                             </tr>
                             <tr>
@@ -199,20 +157,92 @@
                             </tr>
                             <tr>
                                 <td>Data Structures & Algorithms</td>
-                                <td>B-</td>
-                            </tr>
-                            <tr>
-                                <td>Data Analysis</td>
                                 <td>B</td>
                             </tr>
                             <tr>
-                                <td>Eperiential Learning</td>
+                                <td>Data Analysis</td>
+                                <td>B+</td>
+                            </tr>
+                            <tr>
+                                <td>Experiential Learning</td>
                                 <td>Pass</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-            </div>
+                
+                <script>
+                    const gradesData = {
+                        1: [
+                            { module: "Computer Architecture", grade: "B+" },
+                            { module: "Critical Skills Development", grade: "A" },
+                            { module: "Business & Information Systems", grade: "B+" },
+                            { module: "Discrete Mathematics 1", grade: "B" },
+                            { module: "Software Development 1", grade: "B+" },
+                            { module: "Visual Design & User Experience", grade: "B" }
+                        ],
+                        2: [
+                            { module: "Social Media Communications", grade: "A" },
+                            { module: "Database Fundamentals", grade: "B" },
+                            { module: "Operating Systems Fundamentals", grade: "A" },
+                            { module: "Statistics", grade: "B+" },
+                            { module: "Software Development 2", grade: "B-" },
+                            { module: "Systems Analysis", grade: "A" }
+                        ],
+                        3: [
+                            { module: "Advanced Database Technologies", grade: "B-" },
+                            { module: "Discrete Mathematics 2", grade: "B" },
+                            { module: "Network Fundamentals", grade: "B" },
+                            { module: "Software Quality Assurance", grade: "B+" },
+                            { module: "Software Development 3", grade: "B" },
+                            { module: "Client-Side Web Development", grade: "B" }
+                        ],
+                        4: [
+                            { module: "Data Administration", grade: "B" },
+                            { module: "Management Science", grade: "B" },
+                            { module: "Routing & Switching", grade: "B+" },
+                            { module: "Information Security", grade: "B" },
+                            { module: "Software Development 4", grade: "B" },
+                            { module: "Project", grade: "B-" }
+                        ],
+                        5: [
+                            { module: "Server-Side Web Development", grade: "B" },
+                            { module: "Operating Systems", grade: "C" },
+                            { module: "Cloud Services & Computing", grade: "C+" },
+                            { module: "Big Data Technologies", grade: "C" },
+                            { module: "Data Structures & Alrogithms", grade: "B-" },
+                            { module: "Data Analysis", grade: "B" }
+                        ],
+                        6: [
+                            { module: "Work Placement", grade: "Pass" }
+                        ]
+                    };
+                
+                    function updateTable() {
+                        const semester = document.getElementById("semesterSelect").value;
+                        const table = document.getElementById("gradesTable");
+                        const tbody = table.getElementsByTagName("tbody")[0];
+                        
+                        // Clear the table body
+                        tbody.innerHTML = "";
+                
+                        // Get the grades for the selected semester
+                        const selectedSemesterGrades = gradesData[semester];
+                
+                        // Update the table with the new grades
+                        selectedSemesterGrades.forEach(grade => {
+                            const row = tbody.insertRow();
+                            const cell1 = row.insertCell(0);
+                            const cell2 = row.insertCell(1);
+                            cell1.textContent = grade.module;
+                            cell2.textContent = grade.grade;
+                        });
+                
+                        // Update the table heading
+                        table.querySelector("h4").innerHTML = `<b>Semester ${semester}</b> Grades`;
+                    }
+                </script>
+                
         </div>
     </section>
 
@@ -399,8 +429,9 @@
                 <div class="col-md-6">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h5 class="card-title"><b>Formula 1</b></h5>
-                            <p class="card-text">Four Time World Champion</p>
+                            <h5 class="card-title"><b>Problem Solving</b></h5>
+                            <img src="images/idea.jpg" alt="Profile Image" class="rounded-circle mb-4" width="120" height="120">
+                            <p class="card-text">Having completed a QQI Level 5 & 6 and currently undertaking a QQI Level 8, I have been given the opportunities to improve my problem solving skills across projects and group work.</p>
                             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formula1Modal">View
                                 Details</button>
                         </div>
@@ -411,8 +442,9 @@
                 <div class="col-md-6">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h5 class="card-title"><b>Sim Racing</b></h5>
-                            <p class="card-text">Hundreds of Hours in Front of a Monitor</p>
+                            <h5 class="card-title"><b>Communicational Skills</b></h5>
+                            <img src="images/talk.png" alt="Profile Image" class="rounded-circle mb-4" width="120" height="120">
+                            <p class="card-text">Getting the chance to be a part of many projects and group work, as well as Work Placement has allowed me to hone my communicational skills and become a much more outgoing, well-spoken person.</p>
                             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simRacingModal">View
                                 Details</button>
                         </div>
@@ -421,6 +453,55 @@
             </div>
         </div>
     </section>
+
+    <!-- Creating Skills Modal -->
+    <div class="modal fade" id="formula1Modal" tabindex="-1" aria-labelledby="formula1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="formula1ModalLabel"><b>Communicational Skills</b></h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex">
+                    <img src="images/idea.jpg" alt="Idea" class="img-fluid me-3"
+                        style="width: 50%; border-radius: 10px;">
+                    <div>
+                        <p>Watching Formula 1 is passion of mine, especially following iconic drivers like Max Verstappen and upcoming talents like Oscar Piastri. It combines cutting-edge technology from Workday, team strategy, and the thrill
+                            of high-speed racing.</p>
+                        <ul>
+                            <li>Demonstrates your ability to think critically, analyze situations, and devise effective solutions.</li>
+                            <li>Employers value this skill because it shows you're proactive and resourceful, especially in challenging situations.</li>
+                            <li>Improved this skill during many group and project works.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Creating Communicational Modal -->
+    <div class="modal fade" id="simRacingModal" tabindex="-1" aria-labelledby="simRacingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="simRacingModalLabel"><b>Travelling</b></h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex">
+                    <img src="images/beach.png" alt="Beach" class="img-fluid me-3"
+                        style="width: 100%; border-radius: 10px;">
+                    <div>
+                        <p>Since starting my educational journey in college, I have ensured I keep a good balance of work and travel, where during my free time I try and travel to new places and experience many cultures. Recently, I have been spending time travelling to London to see Tottenham Hotspur FC, and last year my family and I visited the United States to see Disneyland.</p>
+                        <ul>
+                            <li>Travel to many places to experience cultures of all kinds.</li>
+                            <li>Enjoy travelling on a budget, making the most of cheaper trips.</li>
+                            <li>Feel travelling is hugely important for mental health.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Creating the Hobbies Section -->
     <section id="hobbies" class="py-5 bg-light">
@@ -433,7 +514,8 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="card-title"><b>Formula 1</b></h5>
-                            <p class="card-text">Four Time World Champion</p>
+                            <img src="images/F1.jpg" alt="Profile Image" class="rounded-circle mb-4" width="120" height="120">
+                            <p class="card-text">Formula One, commonly known as Formula 1 or F1, is the highest class of international racing for open-wheel single-seater formula racing cars sanctioned by the Fédération Internationale de l'Automobile.</p>
                             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formula1Modal">View
                                 Details</button>
                         </div>
@@ -444,8 +526,9 @@
                 <div class="col-md-6">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <h5 class="card-title"><b>Sim Racing</b></h5>
-                            <p class="card-text">Hundreds of Hours in Front of a Monitor</p>
+                            <h5 class="card-title"><b>Travelling</b></h5>
+                            <img src="images/Travel.png" alt="Profile Image" class="rounded-circle mb-4" width="120">
+                            <p class="card-text">My favourite thing to look forward to is a good holiday away to a new location, fresh with places to explore and new people to meet. Getting to find new locations to visit is a hobby of mine.</p>
                             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simRacingModal">View
                                 Details</button>
                         </div>
@@ -460,19 +543,18 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="formula1ModalLabel"><b>Formula 1</b></h5>
+                    <h3 class="modal-title" id="formula1ModalLabel"><b>Formula 1</b></h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex">
-                    <img src="images/norris.jpg" alt="Formula 1" class="img-fluid me-3"
+                    <img src="images/Max1.png" alt="Formula 1" class="img-fluid me-3"
                         style="width: 50%; border-radius: 10px;">
                     <div>
-                        <p>Formula 1 has always been a passion of mine, especially following iconic drivers like Michael
-                            Schumacher and Lewis Hamilton. It combines cutting-edge technology, strategy, and the thrill
+                        <p>Watching Formula 1 is passion of mine, especially following iconic drivers like Max Verstappen and upcoming talents like Oscar Piastri. It combines cutting-edge technology from Workday, team strategy, and the thrill
                             of high-speed racing.</p>
                         <ul>
-                            <li>Attended multiple Grand Prix events in person.</li>
-                            <li>Studied aerodynamics and race strategies as a hobby.</li>
+                            <li>Attended multiple Grand Prix events in person, such as Zandvoort and Imola.</li>
+                            <li>Learned a lot about cars, like environmental effects on performance.</li>
                             <li>Supporter of sustainable developments in motorsport.</li>
                         </ul>
                     </div>
@@ -486,20 +568,18 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="simRacingModalLabel"><b>Sim Racing</b></h5>
+                    <h3 class="modal-title" id="simRacingModalLabel"><b>Travelling</b></h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex">
-                    <img src="images/norris.jpg" alt="Sim Racing" class="img-fluid me-3"
-                        style="width: 50%; border-radius: 10px;">
+                    <img src="images/beach.png" alt="Beach" class="img-fluid me-3"
+                        style="width: 100%; border-radius: 10px;">
                     <div>
-                        <p>Sim racing is more than a game; it's a blend of skill, precision, and determination. Over the
-                            years, I've spent countless hours perfecting my craft in virtual racing simulators like
-                            iRacing and Assetto Corsa.</p>
+                        <p>Since starting my educational journey in college, I have ensured I keep a good balance of work and travel, where during my free time I try and travel to new places and experience many cultures. Recently, I have been spending time travelling to London to see Tottenham Hotspur FC, and last year my family and I visited the United States to see Disneyland.</p>
                         <ul>
-                            <li>Built a custom racing simulator rig at home.</li>
-                            <li>Participated in competitive online leagues.</li>
-                            <li>Improved real-world driving skills through simulation.</li>
+                            <li>Travel to many places to experience cultures of all kinds.</li>
+                            <li>Enjoy travelling on a budget, making the most of cheaper trips.</li>
+                            <li>Feel travelling is hugely important for mental health.</li>
                         </ul>
                     </div>
                 </div>
@@ -507,10 +587,40 @@
         </div>
     </div>
 
+    <!-- Creating the Contact Me Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Me - ADD CONTACT ME FORM THAT WHEN FILLED IN GIVES YES MESSAGE</h2>
+            <div class="row">
 
-    <!-- Creating the References Section -->
+                <!-- Formula 1 Hobby -->
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Problem Solving</b></h5>
+                            <img src="images/idea.jpg" alt="Profile Image" class="rounded-circle mb-4" width="120" height="120">
+                            <p class="card-text">Having completed a QQI Level 5 & 6 and currently undertaking a QQI Level 8, I have been given the opportunities to improve my problem solving skills across projects and group work.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formula1Modal">View
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
 
-
+                <!-- Sim Racing Hobby -->
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Communicational Skills</b></h5>
+                            <img src="images/talk.png" alt="Profile Image" class="rounded-circle mb-4" width="120" height="120">
+                            <p class="card-text">Getting the chance to be a part of many projects and group work, as well as Work Placement has allowed me to hone my communicational skills and become a much more outgoing, well-spoken person.</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simRacingModal">View
+                                Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Creating the Contact Me Popup Menu -->
     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
