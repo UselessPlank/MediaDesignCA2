@@ -59,3 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+function sendEmail(event) {
+    event.preventDefault();
+    const successMessage = document.getElementById('successMessage');
+    successMessage.style.display = 'block';
+}
