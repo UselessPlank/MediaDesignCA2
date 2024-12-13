@@ -474,3 +474,30 @@ select.form-control:focus {
     background-color: #0056b3;
     border-color: #0056b3;
 }
+
+/* Ensuring the buttons are equal size */
+.custom-btn {
+    width: 200px; /* Fixed width for both buttons */
+    height: 50px; /* Fixed height for both buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+    background-color: white; /* Initial background color */
+    border: 1px solid #004080; /* Border color */
+}
+
+/* Hover effect for both buttons */
+.custom-btn:hover {
+    background-color: #004080; /* Change background to blue on hover */
+    color: white; /* Change text color to white on hover */
+    border: 1px solid white; /* Change border color to white */
+}
+
+/* Specific hover effect for "Go to Features Page" button */
+.custom-btn:nth-of-type(2):hover {
+    color: white; /* Ensure text turns white on hover */
+}
