@@ -2,6 +2,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    background-color:  #666699;
 }
 
 h1, h2, h3 {
@@ -82,7 +83,7 @@ nav .navbar-brand:hover {
 }
 
 nav .nav-link {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: #333333; /* Neutral dark for good contrast */
     margin-left: 15px;
@@ -414,4 +415,62 @@ select.form-control:focus {
     outline: none;
     border-color: #007BFF;
     box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Style for the headings Location, Email, Phone */
+.contact-heading {
+    font-weight: bold;
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    padding: 5px;
+    margin-bottom: 0; /* To remove extra space under the headings */
+}
+
+/* Adjust the layout if necessary for smaller screen sizes */
+@media (max-width: 767px) {
+    .contact-heading {
+        font-size: 1rem; /* Slightly smaller text on smaller screens */
+    }
+}
+
+/* Targeting only the projects section */
+#projects .project-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: none;
+}
+
+/* Image inside the project card */
+#projects .project-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures the image fills the card */
+}
+
+/* Body inside the project card */
+#projects .project-card-body {
+    padding: 20px;
+}
+
+/* Title inside the project card */
+#projects .project-card-title {
+    font-weight: bold;
+}
+
+/* Text inside the project card */
+#projects .project-card-text {
+    color: #555;
+}
+
+/* Button style */
+#projects .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+#projects .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
