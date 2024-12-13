@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Features</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Page Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #9e9ec2;
+            color: #333;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: #004080;
+        }
+
+        a:hover {
+            color: #003366;
+        }
+
+        /* Hero Section */
+header {
+    background: linear-gradient(90deg, #666699, #004080);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px; /* Reduced height */
+    padding: 0 20px;
+}
+
+header h1 {
+    color: white;
+    font-size: 2rem; /* Reduced font size */
+    margin: 0;
+    text-align: center;
+}
+
+
+        /* Cards */
+        .card {
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            padding: 30px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #004080;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        /* Container Layout */
+        .container {
+            margin-top: -40px;
+        }
+
+        .text-center {
+            margin-bottom: 40px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .card-body {
+                padding: 20px;
+            }
+
+            ul li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container text-center">
+            <h1 style="color: #004080;">.....</h1>
+            <h1>Bootstrap Features Used in the Project</h1>
+        </div>
+    </header>
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="row w-75">
+            <!-- Card 1: List of Bootstrap Features -->
+            <div class="col-12 mb-4">
+                <div class="card bg-white">
+                    <div class="card-body">
+                        <h3>1. List of Bootstrap Features</h3>
+                        <ul>
+                            <li>The Grid System Used for Layout Management</li>
+                            <li>Navigation Bar with Included Search Bar</li>
+                            <li>Buttons with Styling and Modal Links</li>
+                            <li>Forms to Style Email Forms</li>
+                            <li>Cards for Creating Structured Content</li>
+                            <li>Modals for Pop-Up Information Menus</li>
+                            <li>Alerts for Displaying Confirmation Messages</li>
+                            <li>Responsive Utilities for Dynamic Screen Scaling</li>
+                            <li>Back to Top Button to Aid in Navigation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: URL of Website Hosting -->
+            <div class="col-12 mb-4">
+                <div class="card bg-white">
+                    <div class="card-body">
+                        <h3>2. URL of Website Hosting</h3>
+                        <p>Please View My Website: <a href="https://uselessplank.github.io/MediaDesignCA2/"
+                                target="_blank">Jason O'Connor CA2 Website</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
